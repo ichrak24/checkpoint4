@@ -1,0 +1,17 @@
+ALGORITHM inser_sort
+VAR
+    tab : ARRAY_OF INTEGER[50];
+    i,j,elt:INTEGER;
+BEGIN
+ j:=0;
+FOR i FROM 1 TO tab.length STEP 1  DO
+    elt:=tab[i];
+    j:=i-1;
+  WHILE (j>=0 && tab[j]>elt) DO
+      tab[j+1]:=tab[i];
+      j:=j-1;
+  END_WHILE
+        tab[j+1]:=elt;
+END_FOR
+  
+END
